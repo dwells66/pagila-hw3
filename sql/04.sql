@@ -4,7 +4,7 @@
  * 2. but that have never appeared in any movie in the "Horror" category.
  */
 
-SELECT
+SELECT DISTINCT
     a.first_name,
     a.last_name
 FROM actor a
@@ -23,5 +23,4 @@ LEFT JOIN
         WHERE c3.name = 'Horror'
 ) sub2 ON a.actor_id = sub2.actor_id
 WHERE sub2.actor_id IS NULL
-GROUP BY a.first_name,a.last_name
-ORDER BY last_name;
+ORDER BY a.last_name,a.first_name;
