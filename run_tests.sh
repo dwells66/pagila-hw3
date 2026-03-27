@@ -15,7 +15,6 @@ for problem in sql/*; do
         echo pass
     else
         echo fail
-        echo $DIFF
         failed=true
     fi
 done
